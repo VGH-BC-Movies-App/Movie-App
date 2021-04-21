@@ -22,6 +22,18 @@ fetch(movieURL, options)
     .then(movies => console.log(movies))/* review was created successfully */
     .catch( error => console.error(error) ); /* handle errors */
 
+
+function renderMovies(movies){
+    let html = ""
+    html += `<div>${movies.title}</div>`
+    html += `<div>${movies.year}</div>`
+    html += `<div>${movies.genre}</div>`
+    html += `<div>${movies.rating}</div>`
+    return html;
+};
+
+
+
 // let options = {
 //     method: "POST",
 //     headers: {
