@@ -1,36 +1,22 @@
 let movieURL= "https://lava-rich-celsius.glitch.me/movies"
 
-// let movieObj = {"title": "resident evil",
-//     "rating": "5",
-//     "poster": "https://m.media-amazon.com/images/M/MV5BZmI1ZGRhNDYtOGVjZC00MmUyLThlNTktMTQyZGE3MzE1ZTdlXkEyXkFqcGdeQXVyNDE5MTU2MDE@._V1_SX300.jpg",
-//     "year": "2002",
-//     "genre": "Action, Horror, Sci-Fi",
-//     "director": "Paul W.S. Anderson",
-//     "plot": "A special military unit fights a powerful, out-of-control supercomputer and hundreds of scientists who have mutated into flesh-eating creatures after a laboratory accident.",
-//     "actors": "Ryan McCluskey, Oscar Pearce, Indra Ové, Anna Bolt",
-//     "id": 5,}
 
 
-const options = {
-    method: 'GET',
-    headers: {
-        'Content-Type': 'application/json',
-    },
-};
-fetch(movieURL, options)
-    .then( response => response.json() )
-    .then(movies => console.log(movies))/* review was created successfully */
-    .catch( error => console.error(error) ); /* handle errors */
+
+// const options = {
+//     method: 'GET',
+//     headers: {
+//         'Content-Type': 'application/json',
+//     },
+// };
+// fetch(movieURL, options)
+//     .then( response => response.json() )
+//     .then(movies => console.log(movies))/* review was created successfully */
+//     .catch( error => console.error(error) ); /* handle errors */
+//
 
 
-function renderMovies(movies){
-    let html = ""
-    html += `<div>${movies.title}</div>`
-    html += `<div>${movies.year}</div>`
-    html += `<div>${movies.genre}</div>`
-    html += `<div>${movies.rating}</div>`
-    return html;
-};
+
 
 
 
@@ -140,3 +126,5 @@ let putURL = "https://lava-rich-celsius.glitch.me/movies/5"
 //     tbody.innerHTML = renderCoffees(filteredCoffees);
 //
 // }
+
+

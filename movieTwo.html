@@ -1,10 +1,109 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--    ****Bootstrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+          integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
 </head>
 <body>
-$END$
+<!--Loading Screen-->
+<h1 id="loading">
+    LOADING...<br>
+    <img id="loadImage" alt="..." src="">
+    <br>LOADING...
+</h1>
+<header>
+    <h1>Search Movies</h1>
+    <div class="jumbotron-fluid postLoading" id="jumbo">
+        <img src="">
+    </div>
+</header>
+
+<!--Search Bar/Nav Bar-->
+<nav class="navbar navbar-dark bg-dark">
+    <form class="form-inline">
+        <input class="filter" placeholder="SEARCH" />
+    </form>
+</nav>
+<div id="after">
+    <button id="displayForm">Add a Movie</button>
+    <div id="formSection">
+        <input placeholder="Title" id="title" onfocus="this.value=''">
+        <input placeholder="Year" id="year" onfocus="this.value=''">
+        <input placeholder="Minutes" id="minutes" onfocus="this.value=''">
+        <select name="rating" id="ratingGrade">
+            <option value="" disabled selected>Select your Rating</option>
+            <option value="G">G</option>
+            <option value="PG">PG</option>
+            <option value="PG-13">PG-13</option>
+            <option value="R">R</option>
+        </select>
+        <select name="genre" id="genre">
+            <option value="" disabled selected>Select your Genre</option>
+            <option value="action">Action</option>
+            <option value="comedy">Comedy</option>
+            <option value="drama">Drama</option>
+            <option value="animated">Animated</option>
+            <option value="sport">Sport</option>
+        </select>
+        <button id="submit">Submit</button>
+    </div>
+    <div class="movieArea">
+
+    </div>
+    <div id="edit">
+        <button id="closeEdit">Close</button>
+        <label>
+            Title:
+            <input id="changeTitle" class="editInput">
+        </label>
+        <label>
+            Rating:
+            <select name="rating" id="changeRating" class="editInput">
+                <option value="" disabled selected>Select your Rating</option>
+                <option value="G">G</option>
+                <option value="PG">PG</option>
+                <option value="PG-13">PG-13</option>
+                <option value="R">R</option>
+            </select>
+        </label>
+        <label>
+            Genre:
+            <select name="genre" id="changeGenre" class="editInput">
+                <option value="" disabled selected>Select your Genre</option>
+                <option value="action">Action</option>
+                <option value="comedy">Comedy</option>
+                <option value="drama">Drama</option>
+                <option value="animated">Animated</option>
+                <option value="sport">Sport</option>
+            </select>
+        </label>
+        <label>
+            Year:
+            <input id="changeYear" class="editInput">
+        </label>
+        <label>
+            Minutes:
+            <input id="changeMinutes" class="editInput">
+        </label>
+        <button id="changeMovie">Edit</button>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script src="keys.js"></script>
+<script src="movieTwo.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
+        integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
+        crossorigin="anonymous"></script>
+<div class="modal"><!-- Place at bottom of page --></div>
 </body>
 </html>
